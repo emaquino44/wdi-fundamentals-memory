@@ -1,0 +1,33 @@
+body {
+	text-align: center;
+}
+h1 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    color: #002c40;
+    font-size: 45px;
+}
+a  {
+	font-family: "Raleway";
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #f15b31;
+    font-size: 18px;
+}
+
+h2 {
+  	font-family: "Raleway";
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: 0d2c40;
+    font-size: 20px;
+}
+p {
+	color: "droid serif";
+	line-height: 26px;
+	font-size: 18px;
+}
+header {
+	background-color: #f15b31;
+	padding: 20px, 20px, 20px, 20px;
+}
