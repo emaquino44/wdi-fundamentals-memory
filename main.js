@@ -1,5 +1,4 @@
-console.log("User flipped " + "queen");
-console.log("User flipped " + "king");
+
 var cards = [
 	{	
 		rack: 'queen',
@@ -24,11 +23,12 @@ var cards = [
 ];
 var cardsInPlay = [];
 cardsInPlay.push('queen', 'king');
-var cardOne = cardsInPlay[0];
-var cardTwo = cardsInPlay[2];
-console.log("User flipped king" + cardTwo);
-if(cardsInPlay.length === 2) {
-	if (cardsInPlay[0] === cardsInPlay[2]) {
+console.log("User flipped " + "queen");
+console.log("User flipped " + "king");
+
+
+var checkForMatch = function() {
+	if (cardsInPlay[0] === cardsInPlay[1]) {
 		alert("You've found a match") 
 	} else {
 		alert("Sorry, try again.");
@@ -36,22 +36,23 @@ if(cardsInPlay.length === 2) {
 }
 var flipCard = function(cardId) {
 	this.getAttribute('data-id');
-	console.log("User flipped " + cards[cardID].rank);
+	console.log(cardId);
 	cardsInPlay.push(cards[cardID].rank);
-	this.setAttribute('src', cards[cardsID].cardImage)
-	console.log(cards[cardID].cardImage);
-	console.log(cards[cardID].suit);
-}
+	this.setAttribute(src, cards[cardsID].cardImage)
+	if(cardsInPlay.length === 2) {
+	checkForMatch();
+	cardsInPlay = [];
+	}
+};
+
 var createBoard = function() {
 	for (var i = 0; i < cards.length; i++) {
 	}
- var cardElement = document.createElement("img");
-  cardElement.setAttribute("img", "images/back.png");
-  cardElement.setAttribute('data-card', i);
-  cardElement.addEventListener('click', flipcard);
+ var cardElement = document.createElement('img');
+  cardElement.setAttribute('src', 'images/back.png');
+  cardElement.setAttribute('data-id', i);
+  cardElement.addEventListener('click', 'flipCard');
   document.getElementById('game-board').appendChild(cardElement);
-  document.getElementById('img').className='space-fix;'
 }
-createBoard ();
-flipCard(0);
-flipCard(2);
+createBoard();
+
